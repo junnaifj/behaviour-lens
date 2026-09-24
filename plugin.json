@@ -1,0 +1,20 @@
+{
+  "name": "behaviour-lens",
+  "version": "0.1.0",
+  "description": "Turn a daily human-behaviour observation into a concise evidence-backed brief and accumulate longitudinal pattern reviews in Obsidian.",
+  "author": {"name": "Local developer"},
+  "license": "MIT",
+  "keywords": ["behaviour", "research", "obsidian", "reflection", "ai-society"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Behaviour Lens",
+    "shortDescription": "Research daily observations; reveal attention patterns.",
+    "longDescription": "Behaviour Lens treats each observation as a hypothesis, builds a five-minute research and current-affairs brief, saves it as structured Markdown, and produces cautious weekly, monthly, and quarterly reviews of what your notes attend to.",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": ["Research", "Write", "Local persistence"],
+    "defaultPrompt": ["Analyse and save this observation: people seem…", "Review my observation patterns this week.", "Compare my attention patterns this quarter."],
+    "brandColor": "#556B5D"
+  },
+  "mcpServers": "./.mcp.json"
+}

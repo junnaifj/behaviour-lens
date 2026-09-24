@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "behaviour-lens-vault": {
+      "command": "python3",
+      "args": ["${pluginRoot}/scripts/vault_server.py"],
+      "env": {"BEHAVIOUR_LENS_VAULT": "${OBSIDIAN_VAULT_PATH}"}
+    }
+  }
+}
