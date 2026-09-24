@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Behaviour Lens Observation",
+  "type": "object",
+  "required": ["observation", "brief", "date", "evidence_status"],
+  "properties": {
+    "observation": {"type": "string", "minLength": 1}, "brief": {"type": "string", "minLength": 1},
+    "date": {"type": "string", "format": "date"}, "observed_at": {"type": "string", "format": "date-time"},
+    "evidence_status": {"enum": ["supported", "partly-supported", "uncertain", "potentially-misleading"]},
+    "domain": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "setting": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "behavioural_theme": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "analytical_scale": {"type": "array", "items": {"enum": ["individual", "interpersonal", "group", "organisational", "societal", "cross-scale"]}, "uniqueItems": true},
+    "framing": {"type": "array", "items": {"enum": ["descriptive", "causal", "comparative", "evaluative", "moral", "technological", "institutional"]}, "uniqueItems": true},
+    "ai_relevance": {"enum": ["none", "indirect", "direct"]},
+    "keywords": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "pattern_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "sources": {"type": "array", "items": {"type": "object", "required": ["title", "url"], "properties": {"title": {"type": "string"}, "url": {"type": "string"}, "published": {"type": "string"}, "source_type": {"type": "string"}}}},
+    "slug": {"type": "string"}
+  }
+}
