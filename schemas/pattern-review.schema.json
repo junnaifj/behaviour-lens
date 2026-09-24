@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Behaviour Lens Pattern Review", "type": "object",
+  "required": ["review_type", "period_start", "period_end", "review", "observation_ids"],
+  "properties": {
+    "review_type": {"enum": ["weekly", "monthly", "quarterly"]},
+    "period_start": {"type": "string", "format": "date"}, "period_end": {"type": "string", "format": "date"},
+    "review": {"type": "string", "minLength": 1},
+    "observation_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "recurring_themes": {"type": "array", "items": {"type": "string"}},
+    "apparent_gaps": {"type": "array", "items": {"type": "string"}}
+  }
+}
